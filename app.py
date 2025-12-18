@@ -90,10 +90,7 @@ with col3:
     )
     paperless_billing = st.selectbox("Paperless Billing", ['Yes', 'No'])
 
-st.markdown("### ⚙️ Advanced Service Options (Optional)")
 
-with st.expander("Click to configure additional services"):
-    col4, col5, col6 = st.columns(3)
 
     with col4:
         phone_service = st.selectbox("Phone Service", ['Yes', 'No'])
