@@ -90,6 +90,38 @@ with col3:
     )
     paperless_billing = st.selectbox("Paperless Billing", ['Yes', 'No'])
 
+st.markdown("### ⚙️ Advanced Service Options (Optional)")
+
+with st.expander("Click to configure additional services"):
+    col4, col5, col6 = st.columns(3)
+
+    with col4:
+        phone_service = st.selectbox("Phone Service", ['Yes', 'No'])
+        multiple_lines = st.selectbox("Multiple Lines", ['Yes', 'No', 'No phone service'])
+
+    with col5:
+        online_security = st.selectbox(
+            "Online Security", ['Yes', 'No', 'No internet service']
+        )
+        online_backup = st.selectbox(
+            "Online Backup", ['Yes', 'No', 'No internet service']
+        )
+
+    with col6:
+        device_protection = st.selectbox(
+            "Device Protection", ['Yes', 'No', 'No internet service']
+        )
+        tech_support = st.selectbox(
+            "Tech Support", ['Yes', 'No', 'No internet service']
+        )
+        streaming_tv = st.selectbox(
+            "Streaming TV", ['Yes', 'No', 'No internet service']
+        )
+        streaming_movies = st.selectbox(
+            "Streaming Movies", ['Yes', 'No', 'No internet service']
+        )
+
+
 # =============================
 # Build Full Feature Vector
 # =============================
@@ -101,21 +133,22 @@ input_data.loc[0] = {
     'Partner': partner,
     'Dependents': dependents,
     'tenure': tenure,
-    'PhoneService': 'Yes',
-    'MultipleLines': 'No',
+    'PhoneService': phone_service,
+    'MultipleLines': multiple_lines,
     'InternetService': internet_service,
-    'OnlineSecurity': 'No',
-    'OnlineBackup': 'No',
-    'DeviceProtection': 'No',
-    'TechSupport': 'No',
-    'StreamingTV': 'No',
-    'StreamingMovies': 'No',
+    'OnlineSecurity': online_security,
+    'OnlineBackup': online_backup,
+    'DeviceProtection': device_protection,
+    'TechSupport': tech_support,
+    'StreamingTV': streaming_tv,
+    'StreamingMovies': streaming_movies,
     'Contract': contract,
     'PaperlessBilling': paperless_billing,
     'PaymentMethod': payment_method,
     'MonthlyCharges': monthly_charges,
     'TotalCharges': tenure * monthly_charges
 }
+
 
 # =============================
 # Prediction
