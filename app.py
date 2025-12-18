@@ -34,7 +34,7 @@ st.sidebar.title("👨‍💻 Developer Information")
 st.sidebar.markdown("""
 **Name:** Pranav Gaikwad  
 **Role:** Aspiring AI / ML Engineer  
- 
+**Contact ** 7028719844
 
 📧 **Email:** gaikwadpranav988@gmail.com  
 🔗 **LinkedIn:** [Profile](https://www.linkedin.com/in/pranav-gaikwad-0b94032a)  
