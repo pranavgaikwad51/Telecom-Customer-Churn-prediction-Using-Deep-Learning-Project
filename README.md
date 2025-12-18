@@ -6,6 +6,7 @@ Customer churn is one of the most critical challenges faced by telecom companies
 The application predicts whether a customer is likely to **churn (leave the service)** or **stay**, based on demographic details, account information, and subscribed telecom services.
 
 ---
+Streamlit app :- https://telecom-customer-churn-prediction-using-dl-pranavgaikwad.streamlit.app/
 
 ## Problem Statement
 Telecom companies lose substantial revenue when customers discontinue their services. Traditional reactive approaches fail to identify at-risk customers early. The challenge is to build a predictive model that can accurately identify customers who are likely to churn so that proactive retention strategies can be applied.
