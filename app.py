@@ -125,17 +125,24 @@ st.markdown("---")
 if st.button("🔍 Predict Churn"):
     try:
         processed_input = preprocessor.transform(input_data)
-        prediction = model.predict(processed_input)[0][0]
+        prediction = model.predict(processed_input)[0][0]  # 0–1
+
+        churn_percent = prediction * 100
+        stay_percent = (1 - prediction) * 100
 
         st.subheader("📊 Prediction Result")
 
         if prediction >= 0.5:
-            st.error(f"❌ Customer is **likely to churn** (Probability: {prediction:.2f})")
+            st.error(
+                f"❌ Customer is **likely to churn** (Probability: {churn_percent:.0f}%)"
+            )
         else:
-            st.success(f"✅ Customer is **likely to stay** (Probability: {1 - prediction:.2f})")
+            st.success(
+                f"✅ Customer is **likely to stay** (Probability: {stay_percent:.0f}%)"
+            )
 
     except Exception as e:
-        st.error("⚠️ Prediction failed due to feature mismatch or preprocessing issue.")
+        st.error("⚠️ Prediction failed.")
         st.text(str(e))
 
 # =============================
