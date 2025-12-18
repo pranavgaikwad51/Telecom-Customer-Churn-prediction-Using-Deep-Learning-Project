@@ -92,11 +92,11 @@ with col3:
 
 
 
-    with col4:
+with col4:
         phone_service = st.selectbox("Phone Service", ['Yes', 'No'])
         multiple_lines = st.selectbox("Multiple Lines", ['Yes', 'No', 'No phone service'])
 
-    with col5:
+with col5:
         online_security = st.selectbox(
             "Online Security", ['Yes', 'No', 'No internet service']
         )
@@ -104,7 +104,7 @@ with col3:
             "Online Backup", ['Yes', 'No', 'No internet service']
         )
 
-    with col6:
+with col6:
         device_protection = st.selectbox(
             "Device Protection", ['Yes', 'No', 'No internet service']
         )
